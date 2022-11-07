@@ -1,7 +1,7 @@
 import icons from 'url:../../img/icons.svg';
 
 
-import { numberToFraction } from "helpers.js";
+import { numberToFraction } from "./helpers.js";
 
 import View from "./View.js";
 
