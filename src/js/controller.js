@@ -115,6 +115,9 @@ const controlAddRecipe = async function (newRecipe) {
   location.reload();
 
 };
+const newFeature = function () {
+  console.log("welcome")
+}
 
 
 const init = function () {
@@ -125,7 +128,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log("nanuka");
+  newFeature();
 
 };
 
