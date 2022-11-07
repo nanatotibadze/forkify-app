@@ -1,5 +1,5 @@
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from "fraction.js";
+
 
 import { numberToFraction } from "helpers.js";
 
