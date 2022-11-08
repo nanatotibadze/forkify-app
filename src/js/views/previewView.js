@@ -20,7 +20,12 @@ class PreviewView extends View {
             
           </div>
 
-          <div class="recipe__user-generated${this.data.key ? "" : "hidden"}">
+          <div class="recipe__user-generated ${this.data.key ? '' : 'hidden'}">
+          <svg>
+            <use href="${icons}#icon-user"></use>
+          </svg>
+        </div>
+     
          
         </div>
         
