@@ -31,11 +31,13 @@ const showRecipe = async function () {
 
     await model.loadRecipe(id);
     recipeView.render(model.state.recipe);
+
     bookmarkView.update(model.state.bookmarks);
   }
   catch (err) {
     recipeView.renderError();
   }
+
 };
 
 
@@ -97,6 +99,7 @@ const controlAddRecipe = async function (newRecipe) {
 
     recipeView.render(model.state.recipe);
     addRecipeView.renderMessage();
+
 
     bookmarkView.render(model.state.bookmarks);
     window.history.pushState(null, "title", `#${model.state.recipe.id}`);

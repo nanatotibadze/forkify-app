@@ -24,7 +24,9 @@ class PaginationView extends View {
           <use href="${icons}#icon-arrow-left"></use>
         </svg>
         <span> Page ${page - 1}</span>
-      </button>`;
+      </button>
+   
+      `;
 
   }
 
@@ -41,19 +43,17 @@ class PaginationView extends View {
 
 
 
-
   generateMarkup() {
     const curPage = this.data.page;
     const numPages = Math.ceil(this.data.results.length / this.data.resultPerPage);
-
 
 
     //page 1 
 
     if (curPage === 1 && numPages > 1) {
       // return generateNextButton;
-      return this.generateNextButton(curPage);
-      console.log(this.generateNextButton)
+      return this.generateNextButton(curPage)
+
     }
 
     //page 2

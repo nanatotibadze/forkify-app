@@ -1,9 +1,11 @@
 
 import { async } from "regenerator-runtime";
 import { API_URL, KEY } from "./config.js";
-import { AJAX } from "./helpers.js"
+import { AJAX } from "./helpers.js";
 
 import { RES_PER_PAGE } from "./config.js";
+import { DEFAULT_IMAGE } from "./config.js";
+
 
 
 const createRecipeObject = function (data) {
@@ -50,6 +52,7 @@ export const loadRecipe = async function (id) {
     } catch (err) {
         throw err;
     }
+
 };
 
 export const loadSearchResults = async function (query) {
@@ -137,7 +140,7 @@ export const uploadRecipe = async function (newRecipe) {
         const recipe = {
             title: newRecipe.title,
             source_url: newRecipe.sourceUrl,
-            image_url: newRecipe.image,
+            image_url: DEFAULT_IMAGE,
             publisher: newRecipe.publisher,
             cooking_time: +newRecipe.cookingTime,
             servings: +newRecipe.servings,
